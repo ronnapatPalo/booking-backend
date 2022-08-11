@@ -1,0 +1,17 @@
+server:
+  port: ${PORT:8091}
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5555/postgres
+    username: postgres
+    password: mysecretpassword
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
